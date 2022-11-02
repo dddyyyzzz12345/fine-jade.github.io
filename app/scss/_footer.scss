@@ -1,0 +1,114 @@
+.footer {
+    background-color: hsl(220deg, 16%, 96%);
+    color: black;
+    padding: 2.5rem;
+    text-align: center; 
+    position: relative;
+    top:30.25rem;
+
+    .container {
+        display: grid;
+        grid-template-columns: 2fr repeat(2 1fr) 3fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+        "logo links1 links2 cta"
+        "social links1 links2 copyright";
+        gap:1rem;
+        justify-items: start;
+    }   
+
+    a {
+        color:black;
+    }
+
+}
+
+.footer__logo {
+    display: inline-block;
+    grid-area: logo;
+
+    img {
+        width: 13rem;
+        height: 4rem;
+      }
+}
+
+.footer__social {
+    margin-bottom: 1.875rem;
+    grid-area: social;
+    margin-right: 0.7rem;
+    align-self: end;
+
+    img {
+        width: 90%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    a {
+        display: inline-block;
+        height: 1.25rem;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+          }
+    }
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9375rem;
+
+    justify-content: space-between;
+    align-items: center;
+
+    .col1 {
+        grid-area: links1;
+    }
+
+    .col2 {
+        margin-bottom: 1.875rem;
+        grid-area: links2;
+    }
+
+    a {
+        line-height: 2.25;
+        transition: color 150ms ease-in-out;
+
+        &:hover {
+            color: limeGreen;
+        }
+    }
+}
+
+.footer__cta {
+    grid-area: cta;
+    text-align: right;
+    justify-self: end;
+
+    a.button {
+        background-color: rgb(243, 244, 246);
+        border: 1px solid black;;
+        color: black;
+
+        margin-bottom: 1.875rem;
+
+        &:hover {
+            border-color: white;
+            background-color: hsl(233deg, 26%, 24%);
+            color: white;
+            transition: 300ms ease-in-out;
+        }
+    }
+}
+
+.footer__copyright {
+    font-size: 0.8125rem;
+    color: hsl(233deg, 8%, 62%);
+    
+    grid-area: copyright;
+    align-self: start;
+    justify-self: end;
+}

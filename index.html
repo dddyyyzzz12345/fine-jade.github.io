@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name="description" content="website for Fine Jade">
+    <meta name ="keywords" content="shiyuqingyuan, Fine Jade">
+    <meta name = "author" content="Darren Dong">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dict/style.css"/>
+    <link rel="icon" href="/image/logo1.png" type = "image/x-icon">
+    <title>Fine Jade | 石玉情缘 </title>
+</head>
+
+<header class="header nav-down">
+    <div class="overlay has-fade fade-out"></div>
+
+    <nav class="container container--pall flex flex-jc-sb flex-ai-c">
+        <a href="/" class="header__logo">
+            <img src="/image/logo1.png" alt="FineJade1">
+            <img src="/image/logo2.png" alt="FineJade2">
+        </a>  
+
+        <div class=" container--pall header__links hide-for-mobile" >
+            <a href="#">吊坠</a>
+            <a href="#">手镯</a>
+            <a href="#">手串</a>
+            <a href="#">耳饰</a>
+            <a href="#">戒指</a>
+            <a href="#">新上架</a>
+        </div>
+
+        <a href="#" class="button hide-for-mobile ">
+            <img src="image/search.svg" alt="Search_Icon">
+            <div class="text__overlay">
+                <div class="text">搜索</div>
+            </div> 
+        </a>
+
+        <a href="#" class="button hide-for-mobile ">
+            <img src="/image/shopping_cart.svg" alt="Shopping_Cart_Icon" class="image">
+
+        </a>
+
+    </nav>
+
+</header>
+
+<body>
+    <section class="hero">
+        <div class="container">
+       
+            <div class="hero__text">
+                <h1>
+                    Fine Jade, the best Chinese jewelry
+                </h1>
+                <p>
+                    Delightful remarkably mr on announcing themselves entreaties favourable. About to in so terms voice at. Equal an would is found seems of.
+                </p>
+                <a href="#" class="button">See Products</a>
+            </div>
+
+            <div class="hero__image">
+      
+                <div class="mySlides fade">
+                    <img src="/image/cut1.jpeg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="/image/cut2.jpeg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="/image/cut3.jpeg">
+                </div>
+                <div style="text-align:center; margin:-4vh;">
+        
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+        
+                </div>
+                <a class="prev" onclick="prevSlide()">&#10094;</a>
+                <a class="next" onclick="showSlides()">&#10095;</a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="popular">
+        <h1>最受欢迎</h1>
+        <a href="#" class = "dis">Discovery More</a>
+
+        <div class="popular__image">
+            <div id="menu-slider-container">
+                <ul id="menu-slider">
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list1.jpeg);"></a></li>
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list2.jpeg);"></a></li>
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list3.jpeg);"></a></li>
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list4.jpeg);"></a></li>
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list5.jpeg);"></a></li>
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list6.jpeg);"></a></li>
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list7.jpeg);"></a></li>
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list8.jpeg);"></a></li>
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list9.jpeg);"></a></li>
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list10.jpeg);"></a></li>
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list11.jpeg);"></a></li>
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list12.jpeg);"></a></li>
+                    <li><a href="#" class="menu-slider-link" style = "background-image: url(/image/slider_list/list13.jpeg);"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <div id="menu-slider-prev"><<</div>
+            <div id="menu-slider-next">>></div>
+        </div>
+
+    </section>
+
+    <section class = "newin">
+        <div class = "container">
+            <h1>新品上市</h1>
+            <a href="#" class = "dis">Discovery More</a>
+        </div>
+
+        <div class="newin__image container">
+            <a href="#" class="article__item">
+                <div class="article__image" style="background-image: url('/image/newin1.jpeg');"></div>
+                <div class="article__text">
+                    <h3>项链</h3>
+                </div>
+            </a>
+
+            <a href="#" class="article__item">
+                <div class="article__image" style="background-image: url('/image/newin2.jpeg');"></div>
+                <div class="article__text">
+                    <h3>戒指</h3>
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+    <section class="category">
+        <div class="container">
+            <h3>
+                Shop by Category
+            </h3>
+            <small>
+                Delightful remarkably mr on announcing themselves entreaties favourable.
+            </small>
+
+
+            <div class="category__image container">
+                <a href="#" class = "category__item" >
+                    <div class="image" style="background-image: url('/image/categ_list/bangle.jpeg') ;"></div>
+                </a>
+    
+                <a href="#" class = "category__item" >
+                    <div class="image" style="background-image: url('/image/categ_list/bracelet.jpeg') ;"></div>
+                </a>
+    
+                <a href="#" class = "category__item" >
+                    <div class="image" style="background-image: url('/image/categ_list/earring.jpeg') ;"></div>
+                </a>
+                
+                <a href="#" class = "category__item" >
+                    <div class="image" style="background-image: url('/image/categ_list/necklace.jpeg') ;"></div>
+                </a>
+    
+                <a href="#" class = "category__item" >
+                    <div class="image" style="background-image: url('/image/categ_list/ring.jpeg') ;"></div>
+                </a>
+            </div>
+    
+            <div class="category__text container">
+                <a href="#" class = "category__item dis" >
+                    手串
+                </a>
+                <a href="#" class = "category__item dis" >
+                    手镯
+                </a>
+                <a href="#" class = "category__item dis" >
+                    耳饰
+                </a>
+                <a href="#" class = "category__item dis" >
+                    项链
+                </a>
+                <a href="#" class = "category__item dis" >
+                    戒指
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="onSale">
+        <div class="onSale__image container">
+            <a href="#" class="onSale__item">
+                <div class="image" style="background-image: url('/image/onSale/onSale1.jpeg');"></div>
+            </a>
+
+            <a href="#" class="onSale__item">
+                <div class="image" style="background-image: url('/image/onSale/onSale2.jpeg');"></div>
+            </a>
+
+            <a href="#" class="onSale__item">
+                <article>
+                    <h3>Last Chance on our Rings</h3>
+                    These rings are definitely worth buying.
+                    <p class="dis">see more</p>
+                </article>
+            </a>
+        </div>
+
+    </section>
+
+    <section class="onSale">
+        <div class="onSale__image container">
+
+            <a href="#" class="onSale__item">
+                <article>
+                    <h3>Theme on Necklace</h3>
+                    Our necklaces are the best.
+                    <p class="dis">see more</p>
+                </article>
+            </a>
+
+            <a href="#" class="onSale__item">
+                <div class="image" style="background-image: url('/image/onSale/onSale3.jpeg');"></div>
+            </a>
+
+            <a href="#" class="onSale__item">
+                <div class="image" style="background-image: url('/image/onSale/onSale4.jpeg');"></div>
+            </a>
+
+        </div>
+
+    </section>
+</body>
+
+<footer class="footer">
+    <div class="container">
+
+        <a class="footer__logo" href="#">
+            <img src="/image/logo1.png" style="width: 4rem;">
+            <img src="/image/logo2.png" >
+        </a>
+
+        <div class="footer__social">
+            <a href="#">
+                <img src="/image/footer/icons8-facebook.svg" alt="Facebook">
+            </a>
+            <a href="#">
+                <img src="/image/footer/icons8-instagram.svg" alt="Instagram">
+            </a>
+            <a href="#">
+                <img src="/image/footer/icons8-tiktok.svg" alt="Tiktok">
+            </a>
+            <a href="#">
+                <img src="/image/footer/icons8-wechat.svg" alt="Wechat">
+            </a>
+        </div>
+
+        <div class="footer__links col1">
+            <a href="#">All Products</a>
+            <a href="#">On Sale</a>
+            <a href="#">Best Sellers</a>
+        </div>
+
+        <div class="footer__links col2">
+            <a href="#">About us</a>
+            <a href="#">Support</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="footer__cta">
+            <a href="#" class="button">Contact Us</a>
+        </div>
+
+        <div class="footer__copyright">
+            &copy;Copy right by FineJade Coded by Darren
+        </div>
+
+    </div>
+</footer>
+
+
+<script src="/app/js/script.js"></script>
+</html>

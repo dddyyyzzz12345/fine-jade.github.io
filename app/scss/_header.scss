@@ -1,0 +1,105 @@
+.header {
+    position:fixed;
+    top:0;
+    bottom: auto;
+    z-index: 1;
+    width: 100%;
+    background-color: hsl(220deg, 16%, 96%);
+    transition: 200ms ease-in-out;
+    //border: solid 0.0625rem black;
+
+    nav {
+        position: relative;
+        background-color: hsl(220deg, 16%, 96%);
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
+    }
+}
+
+.header__logo {
+    img {
+        width: auto;
+        height: 3.125rem;
+      }
+}    
+
+.header__links {
+    a {
+        position:relative;
+        font-size: 1.3125rem;
+        color: black;
+        padding: 1.0625rem;
+    }
+
+    ::before {
+        content: "";
+        background-color: lightgray;
+        position: absolute;
+        bottom: 1.25rem;
+        width: 65%;
+        height: 0.5625rem;
+        transition: 300ms ease-in-out;
+        opacity: 0.5;
+      }
+
+      :hover::before {
+        bottom: 0.5rem;
+        height: 80%;
+        opacity: 0.5;
+      }
+}
+
+
+button, .button {
+    position:relative;
+    padding: 1rem 2rem;
+    //border-radius: 0.625rem;
+    //border: 1px solid black;
+    cursor: pointer;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.125rem;
+    
+    .image {
+        display: block;
+        width: 100%;
+        height: 1.875rem;
+      }
+
+    .text__overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        background-color: hsl(220deg, 16%, 96%);
+        transition: 0.5s ease;
+        //border: 1px solid black;
+
+        .text {
+            color: hsl(233deg, 26%, 24%);
+            font-size: 1.25rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+          }
+    }
+
+    &:hover {
+      .text__overlay {
+        opacity: 1;
+    }
+    }
+  }
+
+.nav-up {
+  top: -100px;
+}
